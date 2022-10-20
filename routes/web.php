@@ -13,6 +13,8 @@ use App\Http\BookControllers;
 */
 
 
-
-Route::get('/',[\App\Http\Controllers\BookController::class,'index'])->name('book.index');
+Route::get('/',function () {
+    return view('layout');
+});
+Route::get('/mundo_libro',[\App\Http\Controllers\BookController::class,'index'])->name('book.index');
 
