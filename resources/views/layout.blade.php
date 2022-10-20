@@ -12,7 +12,7 @@
 
 
     <title>MundoLibro</title>
-    <h1>como estas</h1>
+    <h1> hola como estas</h1>
 
 </head>
 <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
