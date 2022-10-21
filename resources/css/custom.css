@@ -1,0 +1,12 @@
+/*tag_name selecciona la etiqueta y agrega los estilos que tiene dentro*/
+body {
+    background-color: darkcyan;
+}
+
+.btn-red{
+  background: red;
+}
+
+.container{
+    background: white;
+}

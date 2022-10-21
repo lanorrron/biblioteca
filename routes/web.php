@@ -14,7 +14,7 @@ use App\Http\BookControllers;
 
 
 Route::get('/',function () {
-    return view('layout');
+    return view('inicio');
 });
 Route::get('/mundo_libro',[\App\Http\Controllers\BookController::class,'index'])->name('book.index');
 
