@@ -47,7 +47,7 @@
             @yield('content')
         </main>
         <footer class="bg-theme-black1 p-5 text-center w-full">
-            <p class="text-white text-3xl ">mundo libro tu libreria favorita desde el 2022</p>
+            <p class="text-white text-3xl ">mundo libro, tu libreria favorita desde el 2022</p>
         </footer>
     </div>
 

@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\BookControllers;
+use App\Http\CatergoryControllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +17,13 @@ use App\Http\BookControllers;
 Route::get('/',function () {
     return view('inicio');
 });
+Route::get('/index',[\App\Http\Controllers\CategoryController::class,'index'])->name('category.index');
+Route::get('/create',[\App\Http\Controllers\CategoryController::class,'create'])->name('category.create');
+Route::get('/edit/{id}',[\App\Http\Controllers\CategoryController::class,'edit'])->name('category.edit');
+Route::put('/update/{id}',[\App\Http\Controllers\CategoryController::class,'update'])->name('category.update');
+Route::get('/show/{id}',[\App\Http\Controllers\CategoryController::class,'show'])->name('category.show');
+Route::delete('/destroy/{id}',[\App\Http\Controllers\CategoryController::class,'destroy'])->name('category.destroy');
+
+
 Route::get('/mundo_libro',[\App\Http\Controllers\BookController::class,'index'])->name('book.index');
 

@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\categoty;
 use Illuminate\Http\Request;
+use function GuzzleHttp\Promise\all;
 
-class CategotyController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class CategotyController extends Controller
      */
     public function index()
     {
-        //
+        $datos= categoty::all();
+        return view('category.index',['datos'=>$datos]);
     }
 
     /**
