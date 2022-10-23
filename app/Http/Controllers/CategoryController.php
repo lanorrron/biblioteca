@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\category;
 use App\Models\categoty;
 use Illuminate\Http\Request;
 use function GuzzleHttp\Promise\all;
@@ -15,7 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $datos= categoty::all();
+        $datos= category::all();
         return view('category.index',['datos'=>$datos]);
     }
 
@@ -26,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category.create');
     }
 
     /**
@@ -37,7 +38,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category=new category();
+        $category->name=$request->name;
+        $category->save();
+
+        return redirect()->route('category.index');
     }
 
     /**

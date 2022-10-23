@@ -17,13 +17,14 @@ use App\Http\CatergoryControllers;
 Route::get('/',function () {
     return view('inicio');
 });
-Route::get('/index',[\App\Http\Controllers\CategoryController::class,'index'])->name('category.index');
-Route::get('/create',[\App\Http\Controllers\CategoryController::class,'create'])->name('category.create');
-Route::get('/edit/{id}',[\App\Http\Controllers\CategoryController::class,'edit'])->name('category.edit');
-Route::put('/update/{id}',[\App\Http\Controllers\CategoryController::class,'update'])->name('category.update');
-Route::get('/show/{id}',[\App\Http\Controllers\CategoryController::class,'show'])->name('category.show');
-Route::delete('/destroy/{id}',[\App\Http\Controllers\CategoryController::class,'destroy'])->name('category.destroy');
 
+Route::get('categories/',[\App\Http\Controllers\CategoryController::class,'index'])->name('category.index');
+Route::get('categories/create',[\App\Http\Controllers\CategoryController::class,'create'])->name('category.create');
+Route::get('categories/edit/{id}',[\App\Http\Controllers\CategoryController::class,'edit'])->name('category.edit');
+Route::put('categories/update/{id}',[\App\Http\Controllers\CategoryController::class,'update'])->name('category.update');
+Route::get('categories/show/{id}',[\App\Http\Controllers\CategoryController::class,'show'])->name('category.show');
+Route::delete('categories/destroy/{id}',[\App\Http\Controllers\CategoryController::class,'destroy'])->name('category.destroy');
+Route::post('categories/store',[\App\Http\Controllers\CategoryController::class,'store'])->name('category.store');
 
 Route::get('/mundo_libro',[\App\Http\Controllers\BookController::class,'index'])->name('book.index');
 
