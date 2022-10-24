@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use mysql_xdevapi\Table;
 
-class author extends Model
+class Author extends Model
 {
     protected $table = ('author');
     protected $primaryKey = ('id');

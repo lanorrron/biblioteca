@@ -51,9 +51,10 @@ class CategoryController extends Controller
      * @param  \App\Models\categoty  $categoty
      * @return \Illuminate\Http\Response
      */
-    public function show(categoty $categoty)
+    public function show($id)
     {
-        //
+        $category=Category::find($id);
+        return view('category.delete',['category'=>$category]);
     }
 
     /**
@@ -62,9 +63,10 @@ class CategoryController extends Controller
      * @param  \App\Models\categoty  $categoty
      * @return \Illuminate\Http\Response
      */
-    public function edit(categoty $categoty)
+    public function edit($id)
     {
-        //
+        $category= Category::find($id);
+        return view('category.update',['category'=>$category]);
     }
 
     /**
@@ -74,9 +76,13 @@ class CategoryController extends Controller
      * @param  \App\Models\categoty  $categoty
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, categoty $categoty)
+    public function update(Request $request,$id)
     {
-        //
+        $category=Category::find($id);
+        $category->name=$request->name;
+        $category->save();
+
+        return redirect()->Route('category.index')->with("success","updated successfully");
     }
 
     /**
@@ -85,8 +91,10 @@ class CategoryController extends Controller
      * @param  \App\Models\categoty  $categoty
      * @return \Illuminate\Http\Response
      */
-    public function destroy(categoty $categoty)
+    public function destroy($id )
     {
-        //
+        $category=Category::find($id);
+        $category->delete();
+        return redirect()->Route('category.index')->with("success",'removed successfully');
     }
 }

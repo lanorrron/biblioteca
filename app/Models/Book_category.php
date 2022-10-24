@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class book_category extends Model
+class Book_category extends Model
 {
     protected $table=('book_category');
     protected $primaryKey=('id');

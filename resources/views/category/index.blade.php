@@ -5,16 +5,17 @@
         <div>
 
             <div class="row">
-                <div class="col-sm-12">
-                    @if( $mensaje = Session::get('success'))
-                        <div class="alert alert-success" role="alert">
-                            {{$mensaje}}
-                        </div>
-                    @endif
-                </div>
+
 
             </div>
             <h2 class="text-3xl  "><b> lista de categorías</b></h2>
+            <div class="bg-blue-200 rounded text-center w-1/3  ">
+                @if( $mensaje = Session::get('success'))
+                    <div class="alert alert-success " role="alert">
+                        {{$mensaje}}
+                    </div>
+                @endif
+            </div>
             <p>
                 <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                    type="button" href="{{Route("category.create")}}">
@@ -42,7 +43,7 @@
                     <tbody>
                     @foreach($datos as $item)
 
-                        <tr>
+                        <tr >
                             <td>{{$item->id}}</td>
                             <td>{{$item->name}}</td>
                             <td>
