@@ -19,9 +19,12 @@
                 <form action="{{route('category.destroy',$category->id)}}" method="post">
                     @method('delete')
                     @csrf
-                    <button class="bg-pink-500 hover:bg-yellow-300 rounded my-3 p-1 mr-3" href="{{Route('category.index')}}">cancel</button>
+                    <a href="{{Route('category.index')}}">
+                    <button type="button"
+                        class="bg-pink-500 hover:bg-yellow-300 rounded my-3 p-1 mr-3" >cancel</button>
+                    </a>
 
-                    <button class="bg-red-500 hover:bg-orange-500 rounded my-3 p-1 ">delete</button>
+                    <button type="button" class="bg-red-500 hover:bg-orange-500 rounded my-3 p-1 ">delete</button>
 
                 </form>
 
