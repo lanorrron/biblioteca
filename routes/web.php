@@ -28,3 +28,10 @@ Route::post('categories/store',[\App\Http\Controllers\CategoryController::class,
 
 Route::get('/mundo_libro',[\App\Http\Controllers\BookController::class,'index'])->name('book.index');
 
+Route::get('author/',[\App\Http\Controllers\AuthorController::class,'index'])->name('author.index');
+Route::get('author/create',[\App\Http\Controllers\AuthorController::class,'create'])->name('author.create');
+Route::get('author/edit/{id}',[\App\Http\Controllers\AuthorController::class,'edit'])->name('author.edit');
+Route::put('author/update/{id}',[\App\Http\Controllers\AuthorController::class,'update'])->name('author.update');
+Route::get('author/show/{id}',[\App\Http\Controllers\AuthorController::class,'show'])->name('author.show');
+Route::delete('author/destroy/{id}',[\App\Http\Controllers\AuthorController::class,'destroy'])->name('author.destroy');
+Route::post('author/store',[\App\Http\Controllers\AuthorController::class,'store'])->name('author.store');
