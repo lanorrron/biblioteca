@@ -24,7 +24,7 @@
                         class="bg-pink-500 hover:bg-yellow-300 rounded my-3 p-1 mr-3" >cancel</button>
                     </a>
 
-                    <button type="button" class="bg-red-500 hover:bg-orange-500 rounded my-3 p-1 ">delete</button>
+                    <button class="bg-red-500 hover:bg-orange-500 rounded my-3 p-1 ">delete</button>
 
                 </form>
 

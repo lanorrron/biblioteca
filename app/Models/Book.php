@@ -15,7 +15,7 @@ class Book extends Model
         'nro_pages',
         'description',
         'URL_image',
-        'user_id'
+
     ];
     public $timestamps=false;
     use HasFactory;
