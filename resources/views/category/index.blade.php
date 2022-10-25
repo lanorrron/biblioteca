@@ -1,5 +1,5 @@
 @extends('layout')
-@section('category')
+
 
     @section('content')
         <div>
@@ -27,6 +27,7 @@
                 <table class="w-1/2 border-collapse block md:table ">
 
                     <thead class="block md:table-header-group">
+
                     <tr class=" w-2/5 p-3 border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
                         <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-center block md:table-cell text -center">
                             id
