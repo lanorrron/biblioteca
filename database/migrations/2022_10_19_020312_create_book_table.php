@@ -16,12 +16,9 @@ return new class extends Migration
         Schema::create('book', function (Blueprint $table) {
             $table->id();
             $table->String('name');
-            $table->integer('nro-pages');
+            $table->integer('nro_pages');
             $table->String('description');
             $table->String('URL_image');
-            $table->unsignedBigInteger('user_id');
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
