@@ -26,7 +26,7 @@ Route::get('categories/show/{id}',[\App\Http\Controllers\CategoryController::cla
 Route::delete('categories/destroy/{id}',[\App\Http\Controllers\CategoryController::class,'destroy'])->name('category.destroy');
 Route::post('categories/store',[\App\Http\Controllers\CategoryController::class,'store'])->name('category.store');
 
-Route::get('/mundo_libro',[\App\Http\Controllers\BookController::class,'index'])->name('book.index');
+Route::get('book/',[\App\Http\Controllers\BookController::class,'index'])->name('book.index');
 
 Route::get('author/',[\App\Http\Controllers\AuthorController::class,'index'])->name('author.index');
 Route::get('author/create',[\App\Http\Controllers\AuthorController::class,'create'])->name('author.create');
@@ -35,3 +35,10 @@ Route::put('author/update/{id}',[\App\Http\Controllers\AuthorController::class,'
 Route::get('author/show/{id}',[\App\Http\Controllers\AuthorController::class,'show'])->name('author.show');
 Route::delete('author/destroy/{id}',[\App\Http\Controllers\AuthorController::class,'destroy'])->name('author.destroy');
 Route::post('author/store',[\App\Http\Controllers\AuthorController::class,'store'])->name('author.store');
+
+Route::get('book/create',[\App\Http\Controllers\BookController::class,'create'])->name('book.create');
+Route::get('book/edit/{id}',[\App\Http\Controllers\BookController::class,'edit'])->name('book.edit');
+Route::put('book/update/{id}',[\App\Http\Controllers\BookController::class,'update'])->name('book.update');
+Route::get('book/show/{id}',[\App\Http\Controllers\BookController::class,'show'])->name('book.show');
+Route::delete('book/destroy/{id}',[\App\Http\Controllers\BookController::class,'destroy'])->name('book.destroy');
+Route::post('book/store',[\App\Http\Controllers\BookController::class,'store'])->name('book.store');
